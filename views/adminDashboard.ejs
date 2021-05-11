@@ -1,0 +1,71 @@
+<%- include("partials/adminheader"); -%>
+<!-- Content -->
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/0" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">Total Orders</h4>
+      <div class="card-body">
+        <h5><%=arr[0]%></h5>
+        <small>Total Orders</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/1" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">New Orders</h4>
+      <div class="card-body">
+        <h5><%=arr[1]%></h5>
+        <small>New Orders</small>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/2" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">Confirmed Orders</h4>
+      <div class="card-body">
+        <h5><%=arr[2]%></h5>
+        <small>Confirmed Orders</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/3" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">Food Dispatched</h4>
+      <div class="card-body">
+        <h5><%=arr[3]%></h5>
+        <small>Food Dispatched</small>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/4" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">Food Delivered</h4>
+      <div class="card-body">
+        <h5><%=arr[4]%></h5>
+        <small>Food Delivered</small>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="position: relative; ">
+      <a href="/admin/orders/5" class="link-tag" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 100%;"></a>
+      <h4 class="card-header">Cancelled</h4>
+      <div class="card-body">
+        <h5><%=arr[5]%></h5>
+        <small>Cancelled</small>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("partials/adminfooter"); -%>

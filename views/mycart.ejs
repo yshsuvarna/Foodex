@@ -1,0 +1,114 @@
+<%- include("partials/header"); -%>
+<div class="container mycart-container">
+  <h2>Your Order</h2>
+  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  <div class="row" style="padding: 5px;">
+    <div class="col-lg-7">
+      <ul class="list-unstyled">
+        <% cards.forEach(function(card) { %>
+        <li class="media">
+          <img style="height: 130px; width: 130px;" src="<%=card.cardImage%>" class="mr-3 mycart-image" />
+          <div style="text-align: center;" class="media-body">
+            <h5 class="mt-0 mb-1"><%=card.cardTitle%></h5>
+            <%=card.cardInfo%>
+            
+          </div>
+          <div style="text-align: center;" class="media-body">
+            <h5 class="mt-0 mb-1">Price: <%=card.cardPrice%></h5>
+            
+            <h5 class="mt-0 mb-1">Quantity: <%=card.cardQuantity%></h5>
+            
+            
+              <br>
+            <button type="submit" onclick="removeFromCart('<%=card.cardId%>')" class="btn btn-danger">Remove From Cart</button>
+            
+          </div>
+          
+        </li>
+        <hr>
+        <% }) %>
+      </ul>
+      <% let total = 0; %>
+      <% for(let i = 0; i < cards.length; i++) { %>
+      <% total = (cards[i].cardPrice * cards[i].cardQuantity) + total; %> 
+      <% } %>
+    </div>
+    
+    
+    <div class="col-lg-3 offset-lg-2" style =" height: 600px; text-align:center; background-color: #333; padding: 30px; margin-top: 10px;border-radius: 10px;opacity: 0.8;">
+      <form method="POST" action="/placeorder">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Flat or Building Number"
+            name="flatNumber"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Street Name"
+            name="streetName"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Area"
+            name="area"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Landmark if Any"
+            name="landmark"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="City"
+            name="city"
+          />
+        </div>
+        <div class="form-group">
+          <h3 style="color: white;">Your Total is:</h3>
+          <h3 style="color: white;"><%=total%></h3>
+        </div>
+        <button type="submit" class="btn btn-primary">Place Order</button>
+      </form>
+
+      
+        <% if(status === 1) { %>
+          <br>
+          <div class="alert alert-success" role="alert">Order sent</div>
+        <% } %>
+        <% if(status === 2) { %>
+          <br>
+          <div class="alert alert-success" role="alert">Order Confirmed</div> 
+        <% } %>
+        <% if(status === 3) { %>
+          <br>
+          <div class="alert alert-success" role="alert">Food Dispatched</div> 
+        <% } %>
+        <% if(status === 4) { %>
+          <br>
+          <div class="alert alert-success" role="alert">Food Delivered</div> %>
+        <% } %>
+        <% if(status === 5) { %>
+          <br>
+          <div class="alert alert-success" role="alert">Cancelled</div>
+        <% } %>
+
+        <button onclick="reloadMycart('<%=currentOrderId%>')" style="margin-top: 7%;" class="btn btn-primary">Check Status</button>
+    </div>
+  
+  </div>
+</div>
+<%- include("partials/footer"); -%>

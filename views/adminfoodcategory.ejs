@@ -1,0 +1,21 @@
+<%- include("partials/adminheader"); -%>
+<!-- Content -->
+<h1>Food Category</h1>
+<div class="row">
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <!-- Makes POST request to /register route -->
+        <form action="/admin/addfoodcategory" method="POST">
+          <div class="form-group">
+            <h2><label for="FoodCategory">New Category</label></h2>
+            <input type="text" class="form-control" name="category" />
+          </div>
+
+          <button type="submit" class="btn btn-dark">Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include("partials/adminfooter"); -%>

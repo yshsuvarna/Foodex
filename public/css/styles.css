@@ -1,0 +1,87 @@
+body {
+  min-height: 100%;
+}
+body{
+  font-family: "Montserrat";
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: "Montserrat-Bold";
+}
+.navbar {
+  padding-right: 5%;
+}
+
+.jumbotron {
+  height: 500px;
+  margin: auto;
+  background: url("/images/homeFinal.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-dropdown {
+  margin-bottom: 2%;
+}
+
+.order-button {
+  margin-right: 0px;
+  float: right;
+}
+
+#each-card {
+  margin: 5% 0;
+}
+
+.recipe-image {
+  height: 286px;
+  width: 286px;
+}
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color:black;
+}
+.white-section {
+  background-color: #fff;
+}
+
+.mycart-image {
+  height: 64px;
+  width: 64px;
+}
+
+.mycart-container {
+  padding: 5%;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foodex</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+<link rel="icon" href="/images/favicon.ico"/>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat";
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("/images/homeFinal.jpg");
+
+  /* Add the blur effect */
+  filter: blur(10px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 30px;
+  text-align: center;
+  border: 3px solid #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+
+  <h1 style="font-size:50px; font-weight: bold;">About Us</h1>
+  <h2 style="font-size: 35px;">Foodex</h2>
+    <p>Always wanted to take your restaurant business online? But didn't know how? Here we are! This is a Food ordering app for your restaurant. It provides two sides of interface, one for the customer who will order food and one for you(the owner/admin) who will recieve the details of the orders in a vary organised and clean way.</p>
+    <p><a href="https://guarded-bastion-42339.herokuapp.com/">Website</a></p>
+    <p>
+      <ul>
+        <li>Bhoomil Gohel: 190001008</li>
+        <li>Neel Parikh: 190001044</li>
+        <li>Yash Suvarna: 190001068</li>
+        <li>Parul Mogre: 190001037</li>
+        <li>Shivesh Dave: 190001057</li>
+      </ul>
+    <br/>
+    Cheers!</p>
+</div>
+
+</body>
+</html>

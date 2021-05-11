@@ -1,0 +1,28 @@
+<%- include("partials/adminheader"); -%>
+
+<div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">Order Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">Time</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i = 0; i < orderArray.length; i++) { %>
+        <tr>
+          <th scope="row"><%=i+1%></th>
+          <td><%=orderArray[i].idorders%></td>
+          <td><%=orderArray[i].Date%></td>
+          <td><%=orderArray[i].Time%></td>
+          <td><a href="/admin/order/<%=orderArray[i].idorders%>">Update</a></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+
+<%- include("partials/adminfooter"); -%>

@@ -1,0 +1,88 @@
+<%- include("partials/adminheader"); -%>
+
+<div class="row">
+  <div class="col-lg-6">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th scope="row">Order Number</th>
+          <td><%=userDetails.orderNumber%></td>
+        </tr>
+        <tr>
+          <th scope="row">First Name</th>
+          <td><%=userDetails.FirstName%></td>
+        </tr>
+        <tr>
+          <th scope="row">Last Name</th>
+          <td><%=userDetails.LastName%></td>
+        </tr>
+        <tr>
+          <th scope="row">Phone Number</th>
+          <td><%=userDetails.PhoneNum%></td>
+        </tr>
+        <tr>
+          <th scope="row">Email Id</th>
+          <td><%=userDetails.Email%></td>
+        </tr>
+        <tr>
+          <th scope="row">Delivery Address</th>
+          <td><%=userDetails.delAddress%></td>
+        </tr>
+        <tr>
+          <th scope="row">Current Status</th>
+          <% if(userDetails.statusCode === 1) { %>
+          <td>New Order</td>
+          <% } %> <% if(userDetails.statusCode === 2) { %>
+          <td>Confirmed Order</td>
+          <% } %> <% if(userDetails.statusCode === 3) { %>
+          <td>Food Dispatched</td>
+          <% } %> <% if(userDetails.statusCode === 4) { %>
+          <td>Food Delivered</td>
+          <% } %> <% if(userDetails.statusCode === 5) { %>
+          <td>Cancelled</td>
+          <% } %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-lg-6">
+    <table class="table">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Sr. No.</th>
+          <th scope="col">Food Name</th>
+          <th scope="col">Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i = 0; i < orderDetails.length; i++) { %>
+          <tr>
+            <th scope="row"><%=i+1%></th>
+            <td><%=orderDetails[i].foodName%></td>
+            <td><%=orderDetails[i].foodQuantity%></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-5 offset-lg-3">
+    <form method="POST" action="/admin/order/<%=userDetails.orderNumber%>">
+      <div class="form-group">
+        <label>Update status</label>
+        <select class="form-control" name="newStatus">
+          <option>New Order</option>
+          <option>Confirm Order</option>
+          <option>Food Dispatched</option>
+          <option>Food Delivered</option>
+          <option>Cancelled</option>
+        </select>
+      </div>
+      <button type="submit">Update Order</button>
+    </form>
+  </div>
+</div>
+
+<%- include("partials/adminfooter"); -%>

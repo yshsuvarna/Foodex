@@ -1,0 +1,25 @@
+<%- include("partials/adminheader"); -%>
+
+<h1>Food Menu</h1>
+<div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Sr. No.</th>
+        <th scope="col">Category</th>
+        <th scope="col">Recipe Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i = 0; i < menuArray.length; i++) { %>
+        <tr>
+          <th scope="row"><%=i+1%></th>
+          <td><%=menuArray[i].categoryName%></td>
+          <td><%=menuArray[i].recipeName%></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</div>
+<!-- Content -->
+<%- include("partials/adminfooter"); -%>

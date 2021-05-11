@@ -1,0 +1,72 @@
+<%- include("partials/header"); -%>
+<div style=" position:relative; background-image: url(/images/homeFinal.jpg); height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;">
+<div class="container">
+<div class="text-center row row-cols-3 row-cols-md-3">
+<%for(var i = 0; i < reviewsArrReviews.length; i++) {%>
+<div class="container mt-5">
+  <div class="card " style="width: 18rem;">
+    <div class="card-header bg-dark text-white">
+      <%=reviewsArrNames[i]%>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item "><%=reviewsArrReviews[i]%></li>
+      <li class="list-group-item  ">Rating: <%=reviewsArrRatings[i]%></li>
+    </ul>
+  </div>
+</div>
+<%}%>
+</div>
+</div>
+<br><br><br>
+<div class ="container text-center bg-dark text-white" >
+  <br><br><br>
+<%if(check != "nope") {%>
+<div>
+  <form class="" action="/reviews/:<%=isbnval%>" method="post">
+    <label for="">Add one of your own?</label>
+    <br>
+    <label for="rev"> Review: </label>
+    <input type="text" name="rev" value="">
+    <p>Rating:</p>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="rat" id="flexRadioDefault1" value="1">
+      <label class="form-check-label" for="flexRadioDefault1">
+        1
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="rat" id="flexRadioDefault2" value="2">
+      <label class="form-check-label" for="flexRadioDefault2">
+        2
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="rat" id="flexRadioDefault3" value="3">
+      <label class="form-check-label" for="flexRadioDefault3">
+        3
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="rat" id="flexRadioDefault4" value="4">
+      <label class="form-check-label" for="flexRadioDefault4">
+        4
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="rat" id="flexRadioDefault5" value="5">
+      <label class="form-check-label" for="flexRadioDefault5">
+        5
+      </label>
+    </div>
+    <br>
+    <button type="submit" name="button">Post</button>
+  </form>
+</div>
+<%}%>
+<br><br><br>
+</div>
+
+<%- include("partials/footer") -%>
