@@ -30,17 +30,24 @@ The key goal is to boost the restaurant's efficiency by eliminating regular pape
 # Usage steps:
 
 <br/>
-&nbsp;&nbsp;&nbsp;•	The user/customer needs to visit the website (https://guarded-bastion-42339.herokuapp.com/) and register on the system using his credentials. He then needs to login to the website with the credentials he entered. <br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117837463-1a8a2900-b297-11eb-90ed-3a50ac15de2c.png)<br/>
-&nbsp;&nbsp;&nbsp;•	The user can then look at the available dishes he can order on the “Food Menu” tab. Each dish has buttons leading to:-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◦	“Reviews”: Check the ratings and reviews of the specific dish that other users have previously given. You can also add your own ratings and reviews.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◦	“Add to cart”: This button will add a single quantity of the dish to your cart, while clicking multiple times will add multiple quantities of the dish.
+•	The user/customer needs to visit the website (https://guarded-bastion-42339.herokuapp.com/) and register on the system using his credentials. He then needs to login to the website with the credentials he entered.
+
 <br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117834505-d564f780-b294-11eb-8151-0db76d7f845e.png)<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117834531-dd249c00-b294-11eb-9b8c-38b3710714b3.png)<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;•	After adding the required dishes to the cart, the user can click on the “My cart” tab where one can look at the current items in the cart along with their respective quantities and the sum total of all. The user can also remove a particular dish from the cart as well.<br/><br/>
+![image](https://user-images.githubusercontent.com/59607002/117837463-1a8a2900-b297-11eb-90ed-3a50ac15de2c.png)<br/>
+
+
+•	The user can then look at the available dishes he can order on the “Food Menu” tab. Each dish has buttons leading to:-<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◦“Reviews”: Check the ratings and reviews of the specific dish that other users have previously given. You can also add your own ratings and reviews.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◦	“Add to cart”: This button will add a single quantity of the dish to your cart, while clicking multiple times will add multiple quantities of the dish.
+
+
+<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117834505-d564f780-b294-11eb-8151-0db76d7f845e.png)<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117834531-dd249c00-b294-11eb-9b8c-38b3710714b3.png)<br/><br/>
+
+
+&nbsp;&nbsp;&nbsp;•	After adding the required dishes to the cart, the user can click on the “My cart” tab where one can look at the current items in the cart along with their respective quantities and the sum total of all. The user can also remove a particular dish from the cart as well.
+<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![image](https://user-images.githubusercontent.com/59607002/117834459-ce3de980-b294-11eb-860b-b916174c9179.png)<br/><br/>
 
 		
@@ -78,53 +85,53 @@ Extraneous Features:<br/>
 &nbsp;&nbsp;&nbsp;First we created an account on Heroku and then downloaded Heroku  CLI.<br/>
 (2)Preparing Codebase for Heroku Deployment<br/>
 &nbsp;&nbsp;&nbsp;(2a)Tracking Code in Git Repository<br/>
-&nbsp;&nbsp;&nbsp;First we initialise empty git repository using command:<br/>
-&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git init)<br/>
-&nbsp;&nbsp;&nbsp;Then we will add all files in it and commit these changes using commands:<br/>
-&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git add .)<br/>
-&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git commit -m “Commit Message”)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First we initialise empty git repository using command:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git init)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Then we will add all files in it and commit these changes using commands:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git add .)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git commit -m “Commit Message”)<br/>
 &nbsp;&nbsp;&nbsp;(2b)Add Heroku Git Remote <br/>
-&nbsp;&nbsp;&nbsp;To do this we first need to login into heroku:<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> heroku login)<br/>
-Above command will redirect us to the login page.<br/>
-After that To create git we will write,<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> heroku create).<br/>
-(2c)Adding Procfile<br/>
-We will add Procfile using:<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> touch Procfile).<br/>
-After that we will open it and add web: node app.js line in that file.<br/>
-To open File we will use:<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main>open Procfile).<br/>
-(2d)Changing local port to correct port<br/>
-We will add following lines in app.js:<br/>
-let port = process.env.PORT;<br/>
-if (port == null || port == "") {<br/>
-  port = 8000;<br/>
-}<br/>
-app.listen(port);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To do this we first need to login into heroku:<br/>
+&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> heroku login)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Above command will redirect us to the login page.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After that To create git we will write,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> heroku create).<br/>
+&nbsp;&nbsp;&nbsp;(2c)Adding Procfile<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will add Procfile using:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> touch Procfile).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;After that we will open it and add web: node app.js line in that file.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To open File we will use:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main>open Procfile).<br/>
+&nbsp;&nbsp;&nbsp;(2d)Changing local port to correct port<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will add following lines in app.js:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let port = process.env.PORT;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (port == null || port == "") {<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port = 8000;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;app.listen(port);<br/>
 
 
-(2e)Creating Database in Heroku Using ClearDB MySQL <br/>
-We created Database from an existing database in our computer using dump data and structure in the workbench.We exported data from local database into single file and imported that file into our remote database.For remote database,we will get url from ClearDB MySQL for username,host ,password and name.
+&nbsp;&nbsp;&nbsp;(2e)Creating Database in Heroku Using ClearDB MySQL <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We created Database from an existing database in our computer using dump data and structure in the workbench.We exported data from local database into single file and imported that file into our remote database.For remote database,we will get url from ClearDB MySQL for username,host ,password and name.
 
-Our url:<br/>
-mysql://b5cd67a2d76a54:b41d2cef@us-cdbr-east-03.cleardb.com/heroku_cebdef809dbeebc?reconnect=true<br/>
-host: "us-cdbr-east-03.cleardb.com",<br/>
-    user: "b5cd67a2d76a54",<br/>
-    password:"b41d2cef",<br/>
-    database: "heroku_cebdef809dbeebc",<br/>
+&nbsp;&nbsp;&nbsp;Our url:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mysql://b5cd67a2d76a54:b41d2cef@us-cdbr-east-03.cleardb.com/heroku_cebdef809dbeebc?reconnect=true<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host: "us-cdbr-east-03.cleardb.com",<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user: "b5cd67a2d76a54",<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password:"b41d2cef",<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;database: "heroku_cebdef809dbeebc",<br/>
 
-(2f)Node language setup:<br/>
-Specifying Node version in package.json file :<br/>
-"engines": {<br/>
-    "node": "14.x" },<br/>
-(3)Building App<br/>
-Atlast,we will add and commit all changes into our git file using:<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git add .)<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git commit -m “Commit Message”)<br/>
- To push,All changes in heroku git we will write:<br/>
-(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git push heroku master.)<br/>
-This will build our app and we will get the url where our site is hosted.(Our Url:https://guarded-bastion-42339.herokuapp.com/)<br/>
+&nbsp;&nbsp;&nbsp;(2f)Node language setup:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifying Node version in package.json file :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"engines": {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"node": "14.x" },<br/>
+&nbsp;&nbsp;&nbsp;(3)Building App<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atlast,we will add and commit all changes into our git file using:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git add .)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git commit -m “Commit Message”)<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To push,All changes in heroku git we will write:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(PS C:\Users\91932\Desktop\Projects\FoodexFinal-main> git push heroku master.)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This will build our app and we will get the url where our site is hosted.(Our Url:https://guarded-bastion-42339.herokuapp.com/)<br/>
 
 This web-application was created as part of our Software Engineering (CS258) course's project. 
 Individual Contribution:
