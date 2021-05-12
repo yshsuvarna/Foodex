@@ -27,7 +27,7 @@ var currentUser = {
   curUserAddr: "",
 };
 
-//mysql://b5cd67a2d76a54:b41d2cef@us-cdbr-east-03.cleardb.com/heroku_cebdef809dbeebc?reconnect=true
+
 const con = mysql.createPool(
   {
     host: "",
