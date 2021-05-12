@@ -98,6 +98,16 @@ app.post("/login", function(req, res) {
   });
 });
 
+app.get("/logout", function(req, res) {
+  loggedIn=false;
+  currentUser.curUserId = 0;
+      currentUser.curUserFname = "";
+      currentUser.curUserLname = "";
+      currentUser.curUserPhone = "";
+      currentUser.curUserEmail = "";
+      currentUser.curUserAddr = "";
+  res.redirect("/");
+});
 ////// Login and Register Pages end //////////////////////
 
 //////// MENU PAGE ///////////////////////////////////////
