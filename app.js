@@ -36,7 +36,6 @@ const con = mysql.createPool(
     database: "",
   }
 );
-
 var ratings = [];
 
 // con.connect(function (err) {
