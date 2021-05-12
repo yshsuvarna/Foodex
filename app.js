@@ -30,10 +30,10 @@ var currentUser = {
 //mysql://b5cd67a2d76a54:b41d2cef@us-cdbr-east-03.cleardb.com/heroku_cebdef809dbeebc?reconnect=true
 const con = mysql.createPool(
   {
-    host: "us-cdbr-east-03.cleardb.com",
-    user: "b5cd67a2d76a54",
-    password:"b41d2cef",
-    database: "heroku_cebdef809dbeebc",
+    host: "",
+    user: "",
+    password:"",
+    database: "",
   }
 );
 
