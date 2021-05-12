@@ -114,13 +114,6 @@ Extraneous Features:<br/>
 &nbsp;&nbsp;&nbsp;(2e)Creating Database in Heroku Using ClearDB MySQL <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We created Database from an existing database in our computer using dump data and structure in the workbench.We exported data from local database into single file and imported that file into our remote database.For remote database,we will get url from ClearDB MySQL for username,host ,password and name.
 
-&nbsp;&nbsp;&nbsp;Our url:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mysql://b5cd67a2d76a54:b41d2cef@us-cdbr-east-03.cleardb.com/heroku_cebdef809dbeebc?reconnect=true<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host: "us-cdbr-east-03.cleardb.com",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user: "b5cd67a2d76a54",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;password:"b41d2cef",<br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;database: "heroku_cebdef809dbeebc",<br/>
-
 &nbsp;&nbsp;&nbsp;(2f)Node language setup:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifying Node version in package.json file :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"engines": {<br/>
